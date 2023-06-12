@@ -1,6 +1,4 @@
 import './App.scss';
-import Category from './components/category';
-import Header from './components/header';
 import Home from './pages/home';
 
 function App() {
