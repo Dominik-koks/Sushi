@@ -1,10 +1,10 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
-// useEffect(() => {
+// export const fetch = (action) => {
 //   axios.get('http://localhost:3000/db.json').then(({ data }) => {
-//     setPizzas(data.pizzas);
+//     setMenu(data.menu);
 //   });
-// }, []);
+// };
 
 // export const fetchMenu = createAsyncThunk('menu/fetchMenuStatus', async () => {
 //   const { data } = await axios.get(`http://localhost:3000/db.json`);
@@ -14,29 +14,33 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   status: 'loading',
-  items: [],
+  menu: [],
 };
 
-export const counterSlice = createSlice({
-  name: 'counter',
+export const sushiSlice = createSlice({
+  name: 'sushi',
   initialState,
-  reducers: {},
-  //   extraReducers: (builder) => {
-  //     builder.addCase(fetchMenu.pending, (state) => {
-  //       state.status = 'loading';
-  //       state.items = [];
-  //     });
-  //     builder.addCase(fetchMenu.fulfilled, (state, action) => {
-  //       state.items = action.payload;
-  //       state.status = 'succes';
-  //     });
-  //     builder.addCase(fetchMenu.rejected, (state) => {
-  //       state.status = 'error';
-  //       state.items = [];
-  //     });
-  //   },
+  reducers: {
+    setMenu(state, action) {
+      state.menu = action.payload;
+    },
+  },
+  // extraReducers: (builder) => {
+  //   builder.addCase(fetchMenu.pending, (state) => {
+  //     state.status = 'loading';
+  //     state.items = [];
+  //   });
+  //   builder.addCase(fetchMenu.fulfilled, (state, action) => {
+  //     state.items = action.payload;
+  //     state.status = 'succes';
+  //   });
+  //   builder.addCase(fetchMenu.rejected, (state) => {
+  //     state.status = 'error';
+  //     state.items = [];
+  //   });
+  // },
 });
 
-export const {} = counterSlice.actions;
+export const { setMenu } = sushiSlice.actions;
 
-export default counterSlice.reducer;
+export default sushiSlice.reducer;

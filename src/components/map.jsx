@@ -24,11 +24,12 @@ export default function Map() {
             Кофейня в Хасавюрте
           </a>
           <iframe
+            title="myFrame"
             src="https://yandex.ru/map-widget/v1/?ll=46.598002%2C43.248983&mode=poi&poi%5Bpoint%5D=46.596858%2C43.249031&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D165725828075&z=17.86"
             width="100%"
             height="500"
-            frameborder="1"
-            allowfullscreen="true"
+            frameBorder="1"
+            allowFullScreen={true}
             style={{ position: "relative" }}></iframe>
         </div>
       </div>

@@ -1,5 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
+import sushisSlice from './slices/sushisSlice';
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    sushi: sushisSlice,
+  },
 });

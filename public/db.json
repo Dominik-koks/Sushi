@@ -1,6 +1,6 @@
 {
     "menu": [
-       [
+       
           {
             "id": 0,
             "imageUrl": "https://i.postimg.cc/D0xHWJGD/item1.png",
@@ -80,9 +80,7 @@
             "price": 450,
             "category": 0,
             "rating": 10
-          }
-        ],
-     [
+          },
           {
             "id": 8,
             "imageUrl": "https://i.postimg.cc/1t73pKLc/item9.png",
@@ -162,9 +160,7 @@
             "price": 285,
             "category": 1,
             "rating": 7
-          }
-        ],
-       [
+          },
           {
             "id": 16,
             "imageUrl": "https://i.postimg.cc/JzC4c0dg/item17.png",
@@ -244,9 +240,7 @@
             "price": 285,
             "category": 2,
             "rating": 7
-          }
-        ],
-     [
+          },
           {
             "id": 24,
             "imageUrl": "https://i.postimg.cc/7ZNG5SYX/item25.png",
@@ -326,9 +320,8 @@
             "price": 285,
             "category": 3,
             "rating": 7
-          }
-        ],
-        [
+          },
+        
           {
             "id": 32,
             "imageUrl": "https://i.postimg.cc/Z5jnbZVM/item33.png",
@@ -409,8 +402,9 @@
             "category": 4,
            "rating": 7
           }
-        ]
+        
       
  
-    ]
+       
+      ]  
   }

@@ -1,5 +1,3 @@
-
-import item1 from './../assets/menu/items/item1.png'
 import icon1 from './../assets/menu/icons/icon1.png'
 import icon2 from './../assets/menu/icons/icon2.png'
 import icon3 from './../assets/menu/icons/icon3.png'

@@ -125,6 +125,9 @@
   }
   
   .category {
+    position: sticky;
+    top: 10px;
+    z-index: 1000;
     margin-top: 16px;
     width: 816px;
     height: 95px;
@@ -216,6 +219,7 @@
             height: 596px;
             background: #FFFFFF;
             border-radius: 12px;
+            margin-bottom: 12px;
         
             .item {
               width: 379px;
@@ -231,6 +235,7 @@
                   position: absolute;
                   display: flex;
                   column-gap: 6px;
+                  
         
                   :first-child {
                     position: absolute;
@@ -239,6 +244,11 @@
                     color: #FF6633;
                     font-weight: 500;
                     font-size: 18px;
+                    left: 0px;
+                  }
+
+                  :last-child {
+                    left: 50px;
                   }
                   
                   p {
@@ -262,14 +272,19 @@
                   position: absolute;
                   margin-top: 234px;
                   left: 24px;
+                  top: 70px;
         
                   // .icons1 {
                   //   left: 50px;
                   // }
 
-                  // .icons2 {
-                  //   left: 100px;
-                  // }
+                  .icons2 {
+                    margin-left: 7px;
+                  }
+
+                  .icons3 {
+                    margin-left: 4px;
+                  }
 
                 }
         
@@ -283,7 +298,7 @@
                   position: absolute;
                   font-weight: 700;
                   font-size: 27px;
-                  top: -62px;
+                  top: -35px;
                   width: 330px;
                 }
                 
