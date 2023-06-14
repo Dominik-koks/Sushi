@@ -7,7 +7,7 @@ import icon4 from './../assets/menu/icons/icon4.png'
 
 
 
-export default function Menu({ id, imageUrl, name, mas, compound, price, category, rating }) {
+export default function Menu({ id, imageUrl, name, mas, compound, price, hit, now, }) {
 
 
 
@@ -18,8 +18,8 @@ export default function Menu({ id, imageUrl, name, mas, compound, price, categor
                     <div className="item">
                         <div className="foto-block">
                             <div className="foto-title">
-                                <p>Hit</p>
-                                <p>New</p>
+                                {hit ? <p className="foto-title1">Hit</p> : ''}
+                                {now ? <p className="foto-title2">New</p> : ''}
                             </div>
                             <div className='foto'>
                                 <img src={imageUrl} alt="item1" />

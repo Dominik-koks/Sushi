@@ -3,6 +3,8 @@
        
           {
             "id": 0,
+            "hit": "Hit",
+            "now": "New",
             "imageUrl": "https://i.postimg.cc/D0xHWJGD/item1.png",
             "name": "Гункан лосось",
             "mas": [40],
@@ -13,6 +15,7 @@
           },
           {
             "id": 1,
+            "now": "New",
             "imageUrl": "https://i.postimg.cc/g2C56PwY/item2.png",
             "name": "Гункан креветка",
             "mas": [40],
@@ -23,6 +26,7 @@
           },
           {
             "id": 2,
+            "hit": "Hit",
             "imageUrl": "https://i.postimg.cc/Gm8V2pm7/item3.png",
             "name": "Нигири угорь",
             "mas": [40],
