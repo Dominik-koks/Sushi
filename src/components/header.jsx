@@ -7,6 +7,9 @@ import kolokol from './../assets/header/kolokol.png'
 import serdce from './../assets/header/serdce.png'
 import man from './../assets/header/man.png'
 import cart from './../assets/header/cart.png'
+import Cart from './cart'
+import { useDispatch, useSelector } from 'react-redux'
+import { setOpen } from '../redux/slices/homeSlice'
 
 
 
@@ -15,6 +18,14 @@ import cart from './../assets/header/cart.png'
 
 
 export default function Header() {
+
+    const open = useSelector(state => state.home.open)
+    const dispatch = useDispatch()
+
+    const openCart = () => {
+        dispatch(setOpen(!open))
+    }
+
     return (
         <div className='header'>
             <div className="header-container">
@@ -45,10 +56,11 @@ export default function Header() {
                     <img className='icons1' src={kolokol} alt="kolokol" />
                     <img className='icons2' src={serdce} alt="serdce" />
                     <img className='icons3' src={man} alt="man" />
-                    <div className="cart">
+                    <button onClick={openCart} className="carts">
                         <p>Корзина</p>
                         <img src={cart} alt="cart" />
-                    </div>
+                    </button>
+                    {open && <Cart />}
                 </div>
             </div>
         </div>

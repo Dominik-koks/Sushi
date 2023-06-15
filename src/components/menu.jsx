@@ -1,7 +1,9 @@
+import { useDispatch } from 'react-redux'
 import icon1 from './../assets/menu/icons/icon1.png'
 import icon2 from './../assets/menu/icons/icon2.png'
 import icon3 from './../assets/menu/icons/icon3.png'
 import icon4 from './../assets/menu/icons/icon4.png'
+import { setInCart } from '../redux/slices/cartSlice'
 
 
 
@@ -9,6 +11,22 @@ import icon4 from './../assets/menu/icons/icon4.png'
 
 export default function Menu({ id, imageUrl, name, mas, compound, price, hit, now, }) {
 
+
+    const dispatch = useDispatch()
+
+    const addInCart = () => {
+        const item = {
+            id,
+            imageUrl,
+            name,
+            mas,
+            compound,
+            price,
+            hit,
+            now,
+        }
+        dispatch(setInCart(item))
+    }
 
 
     return (
@@ -44,7 +62,7 @@ export default function Menu({ id, imageUrl, name, mas, compound, price, hit, no
                             </div>
                             <div className="item-action">
                                 <img src={icon4} alt="icon4" />
-                                <p>+</p>
+                                <p onClick={addInCart}>+</p>
                             </div>
                         </div>
                     </div>
