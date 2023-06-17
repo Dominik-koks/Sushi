@@ -1,4 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import sushisSlice from './slices/sushisSlice';
 import homeSlice from './slices/homeSlice';
 import cartSlice from './slices/cartSlice';
@@ -9,4 +9,10 @@ export const store = configureStore({
     home: homeSlice,
     cart: cartSlice,
   },
+
+  middleware: [
+    ...getDefaultMiddleware({
+      serializableCheck: false,
+    }),
+  ],
 });

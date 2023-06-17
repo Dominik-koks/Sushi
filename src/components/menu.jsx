@@ -9,10 +9,11 @@ import { setInCart } from '../redux/slices/cartSlice'
 
 
 
-export default function Menu({ id, imageUrl, name, mas, compound, price, hit, now, }) {
+export default function Menu({ id, imageUrl, name, mas, compound, price, hit, now, count }) {
 
 
     const dispatch = useDispatch()
+
 
     const addInCart = () => {
         const item = {
@@ -24,6 +25,7 @@ export default function Menu({ id, imageUrl, name, mas, compound, price, hit, no
             price,
             hit,
             now,
+            count,
         }
         dispatch(setInCart(item))
     }
@@ -62,7 +64,7 @@ export default function Menu({ id, imageUrl, name, mas, compound, price, hit, no
                             </div>
                             <div className="item-action">
                                 <img src={icon4} alt="icon4" />
-                                <p onClick={addInCart}>+</p>
+                                <button onClick={addInCart}>+</button>
                             </div>
                         </div>
                     </div>

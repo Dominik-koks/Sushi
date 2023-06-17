@@ -10,6 +10,7 @@ import cart from './../assets/header/cart.png'
 import Cart from './cart'
 import { useDispatch, useSelector } from 'react-redux'
 import { setOpen } from '../redux/slices/homeSlice'
+import { Link } from 'react-router-dom'
 
 
 
@@ -30,7 +31,7 @@ export default function Header() {
         <div className='header'>
             <div className="header-container">
                 <div className="logo">
-                    <img src={logotip} alt="logo" />
+                    <Link to='/home'> <img src={logotip} alt="logo" /></Link>
                     <img className='strelka' src={strelka} alt="strelka" />
                 </div>
                 <div className="navbar">
@@ -42,10 +43,18 @@ export default function Header() {
                         <p>RU</p>
                     </div>
                     <div className='navigate'>
-                        <p>Главная</p>
-                        <p>Доставка</p>
-                        <p>О нас</p>
-                        <p>Новости</p>
+                        <ul>
+                            <Link to='/home'><li>Главная</li></Link>
+                            <Link to='/delivery'><li>Доставка</li></Link>
+                            <Link to='/we'><li>О нас</li></Link>
+                            <Link to='/news'><li>Новости</li></Link>
+                        </ul>
+
+
+                        {/* <Link to='/home'> <p>Главная</p></Link>
+                        <Link to='/delivery'><p>Доставка</p></Link>
+                        <Link to='/we'><p>О нас</p></Link>
+                        <p>Новости</p> */}
                     </div>
                     <div className="contacts">
                         <img src={telefon} alt="telefon" />

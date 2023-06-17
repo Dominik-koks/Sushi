@@ -20,14 +20,13 @@ export default function Category() {
 
 
     const [act, setAct] = useState(0)
-    console.log(ref)
 
 
     return (
         <div className='category'>
             <div className="category-container">
                 {category.map((cat, i) =>
-                    <div key={i} onClick={(event) => {
+                    <div key={i} onClick={() => {
                         setAct(i)
                         window.scrollTo(0, ref[i].current.offsetTop - 70)
                     }} className={`category-box ${act === i ? 'active' : ''}`}>
