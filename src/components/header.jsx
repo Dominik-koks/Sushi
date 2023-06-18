@@ -31,7 +31,7 @@ export default function Header() {
         <div className='header'>
             <div className="header-container">
                 <div className="logo">
-                    <Link to='/home'> <img src={logotip} alt="logo" /></Link>
+                    <Link to='/'> <img src={logotip} alt="logo" /></Link>
                     <img className='strelka' src={strelka} alt="strelka" />
                 </div>
                 <div className="navbar">
@@ -44,7 +44,7 @@ export default function Header() {
                     </div>
                     <div className='navigate'>
                         <ul>
-                            <Link to='/home'><li>Главная</li></Link>
+                            <Link to='/'><li>Главная</li></Link>
                             <Link to='/delivery'><li>Доставка</li></Link>
                             <Link to='/we'><li>О нас</li></Link>
                             <Link to='/news'><li>Новости</li></Link>

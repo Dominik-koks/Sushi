@@ -20,6 +20,197 @@
     height: 100%;
 
   
+
+    .foolitem{
+      width: 100%;
+      height: 500px;
+      background: #F5F5F7;
+      margin: 50px 0;
+      
+      .foolitem-container {
+        width: 1576px;
+        height: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        
+        .foolitem-blocks {
+          position: absolute;
+          top: 20%;
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          align-items: center;
+
+
+          .foolitem-slide1 {
+            padding: 70px 30px;
+            display: flex;
+            align-items: center;
+            background: rgba(39, 39, 39, 0.05);
+            border-radius: 12px;
+            width: 75px;
+            height: 162px;
+          }
+
+          .foolitem-block {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+
+            .foolitem-block1 {
+              margin: 10px;
+              width: 650px;
+              display: flex;
+
+              .block1-spec {
+                margin-top: 20px;
+                
+
+                .spec1 {
+                  display: flex;
+                  column-gap: 10px;
+                  padding: 9px 12px;
+                  background: #D9F4C5;
+                  border-radius: 8px;
+                  color: #6BC026;
+                  font-weight: 500;
+                  font-size: 12px;
+                  width: 147px;
+                  height: 34px;
+                  margin-bottom: 8px;
+                }
+                .spec2 {
+                  display: flex;
+                  column-gap: 10px;
+                  padding: 9px 12px;
+                  background: #FBDCD5;
+                  border-radius: 8px;
+                  color: #EB5757;
+                  font-weight: 500;
+                  font-size: 12px;
+                  width: 95px;
+                  height: 34px;
+                }
+              }
+              .footitem-foto {
+                margin-top: 50px;
+                width: 300px;
+                height: 300px;
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+            .foolitem-block2 {
+              margin: 10px;
+              width: 650px;
+
+              .block2-spec {
+                display: flex;
+                justify-content: space-between;
+                width: 112px;
+                height: 32px;
+                margin-top: 20px;
+                margin-bottom: 15px;
+
+                :first-child {
+                  color: #FF6633;
+                  font-weight: 500;
+                  font-size: 18px;
+                  padding: 6px 10px;
+                  background: #FBDCD5;
+                  border-radius: 8px;
+                  display: flex;
+                  align-items: center;
+                }
+                
+                :last-child {
+                  color: #00CC2D;
+                  font-weight: 500;
+                  font-size: 18px;
+                  padding: 6px 10px;
+                  background: #CCF5D5;
+                  border-radius: 8px;
+                  display: flex;
+                  align-items: center;
+                }
+              }
+              h3 {
+                font-weight: 700;
+                font-size: 54px;
+                color: #1D1D1F;
+                margin-bottom: 20px;
+              }
+              .ves {
+                color: #FF6633;
+                font-weight: 500;
+                font-size: 24px;
+                margin-bottom: 20px;
+              }
+
+              .block2-info {
+                width: 450px;
+                display: flex;
+                justify-content: space-between;
+
+                .block2-price {
+                  display: flex;
+                  column-gap: 5px;
+                  align-items: flex-end;
+                  :first-child {
+                    color: #1D1D1F;
+                    font-weight: 700;
+                    font-size: 48px;
+        
+                  }
+                  :last-child  {
+                    color: #686870;
+                    font-weight: 700;
+                    font-size: 32px;
+                    display: flex;
+                    align-items: flex-end;
+                  }
+                }
+
+                .block2-buttons {
+                  display: flex;
+                  justify-content: space-between;
+                  column-gap: 10px;
+                  
+                  .button1 {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 16px 24px;
+                    column-gap: 10px;
+                    background: #00CC2D;
+                    border-radius: 12px;
+                    align-items: center;
+
+                    p {
+                      color: #FFFFFF;
+                      font-weight: 500;
+                      font-size: 16px;
+                    }
+                  }
+
+                  .button2 {
+                    padding: 19px 17px;
+                    background: #FFFFFF;
+                    border-radius: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+
   .header {
     margin-top: 16px;
     width: 1576px;
@@ -515,26 +706,15 @@
                 position: absolute;
                 padding: 24px 24px 10px 24px;
                 position: relative;
+                display: flex;
         
                 .foto-title {
                   position: absolute;
                   display: flex;
                   column-gap: 6px;
-                  
-        
-                  // :first-child {
-                  //   position: absolute;
-                  //   background: #FBDCD5;
-                  //   border-radius: 12px;
-                  //   color: #FF6633;
-                  //   font-weight: 500;
-                  //   font-size: 18px;
-                  //   left: 0px;
-                  // }
 
                   
                   .foto-title1 {
-                    // position: absolute;
                       background: #FBDCD5;
                       padding: 6px 10px;
                       border-radius: 12px;
@@ -545,7 +725,6 @@
                    }
                   
                    .foto-title2 {
-                    // position: absolute;
                     background: #CCF5D5;
                     padding: 6px 10px;
                     border-radius: 12px;
@@ -567,6 +746,7 @@
                   margin-top: 234px;
                   left: 24px;
                   top: 70px;
+                  display: flex;
         
                   .icons1 {
                     left: 50px;

@@ -32,8 +32,6 @@ export default function Cart() {
         dispatch(plusItem(id))
     }
 
-    console.log(cart)
-
     return (
         <>
 
@@ -44,7 +42,7 @@ export default function Cart() {
                         <img onClick={openCart} src={crestick} alt="crestick" />
                     </div>
                     <div className="cart-item-container">
-                        {cart && cart.map(item => <div className="cart-item">
+                        {cart && cart.map((item, i) => <div key={i} className="cart-item">
                             <div className="item-container1">
                                 <img onClick={() => removeItem(item.id)} className='item-img1' src={crestick} alt="crestic" />
                                 <img className='item-img2' src={item.imageUrl} alt="item1" />

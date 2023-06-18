@@ -5,6 +5,7 @@ import Delivery from './pages/delivery';
 import We from './pages/we';
 import Header from './components/header';
 import Footer from './components/footer';
+import FoolItem from './components/foolItem';
 
 function App() {
   return (
@@ -12,9 +13,10 @@ function App() {
       <div className="body-container">
         <Header />
         <Routes>
-          <Route path='/home' element={<Home />} />
+          <Route path='/' element={<Home />} />
           <Route path='/delivery/' element={<Delivery />} />
           <Route path='/we/' element={<We />} />
+          <Route path='/foolItem/:id' element={<FoolItem />} />
         </Routes>
         <Footer />
       </div>

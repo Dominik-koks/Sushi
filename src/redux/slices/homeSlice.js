@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   act: 0,
-  offsetHeight: [],
+  offsetTop: [],
   open: false,
 };
 
@@ -14,7 +14,8 @@ export const homeSlice = createSlice({
       state.act = action.payload;
     },
     addCoor(state, action) {
-      state.offsetHeight = action.payload;
+      const { index, offsetTop } = action.payload;
+      state.offsetTop[index] = offsetTop;
     },
     setOpen(state, action) {
       state.open = action.payload;

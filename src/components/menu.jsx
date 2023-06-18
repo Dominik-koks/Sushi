@@ -4,6 +4,7 @@ import icon2 from './../assets/menu/icons/icon2.png'
 import icon3 from './../assets/menu/icons/icon3.png'
 import icon4 from './../assets/menu/icons/icon4.png'
 import { setInCart } from '../redux/slices/cartSlice'
+import { Link } from 'react-router-dom'
 
 
 
@@ -36,7 +37,7 @@ export default function Menu({ id, imageUrl, name, mas, compound, price, hit, no
             <div className='menu-container'>
                 <div className="menu-items">
                     <div className="item">
-                        <div className="foto-block">
+                        <Link to={`/foolItem/${id}`}> <button className="foto-block">
                             <div className="foto-title">
                                 {hit ? <p className="foto-title1">Hit</p> : ''}
                                 {now ? <p className="foto-title2">New</p> : ''}
@@ -49,7 +50,8 @@ export default function Menu({ id, imageUrl, name, mas, compound, price, hit, no
                                 <img className='icons2' src={icon2} alt="icon2" />
                                 <img className='icons3' src={icon3} alt="icon3" />
                             </div>
-                        </div>
+                        </button>
+                        </Link>
                         <div className="item-title">
                             <h2>{name}</h2>
                             <p className='item-ves'>Вес: {mas}г</p>
