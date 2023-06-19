@@ -7,8 +7,9 @@ import serdce from './../assets/menu/foolitems/serdce.png'
 import cart1 from './../assets/menu/foolitems/cart.png'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
-import { setFoolItem, slide } from '../redux/slices/foolSlice'
+import { setFoolItem, setSlide } from '../redux/slices/foolSlice'
 import axios from 'axios'
+import { setInCart } from '../redux/slices/cartSlice'
 
 
 
@@ -16,32 +17,62 @@ export default function FoolItem() {
 
     const slides = useSelector(state => state.slide.slide)
     const items = useSelector(state => state.slide.foolItems)
+    // const menu = useSelector(state => state.sushi.menu)
+    // const [items, setItems] = useState([])
+    // const [slide, setSlide] = useState()
     const dispatch = useDispatch()
     const { id } = useParams()
+    console.log(id)
+
+
+    useEffect(() => {
+        async function fetchPizza() {
+            const { data } = await axios.get('http://localhost:3000/db.json');
+            dispatch(setFoolItem(data.menu));
+            dispatch(setSlide(id))
+        }
+        fetchPizza()
+    }, [dispatch, id])
+
 
     let item = items[slides]
 
-    useEffect(() => {
-        axios.get('http://localhost:3000/db.json').then(({ data }) => {
-            dispatch(setFoolItem(data.menu))
-            console.log(data.menu)
-        })
-        dispatch(slide(id))
-    }, [dispatch,])
 
-    const changeSlide = (id) => {
-        id -= 1
-        dispatch(slide(id))
+    const minusSlide = (i) => {
+        if (i === 0) {
+            i = 0
+            dispatch(setSlide(i))
+        } else {
+            i -= 1
+            dispatch(setSlide(i))
+        }
+
+    }
+    const plusSlide = (i) => {
+        if (i === items.length - 1) {
+            i = items.length - 1
+            dispatch(setSlide(i))
+        } else {
+            i += 1
+            dispatch(setSlide(i))
+        }
     }
 
-    console.log(items)
+    const addInCart = () => {
+        dispatch(setInCart(item))
+    }
 
+    console.log(slides)
+
+    if (!item) {
+        return <div>'загрузка...'</div>;
+    }
 
     return (
         <div className='foolitem'>
             <div className="foolitem-container">
                 <div className="foolitem-blocks">
-                    <button onClick={() => changeSlide(+slides)} className="foolitem-slide1">
+                    <button onClick={() => minusSlide(+slides)} className="foolitem-slide1">
                         <img src={strelka1} alt="strelka1" />
                     </button>
                     <div className="foolitem-block">
@@ -73,7 +104,7 @@ export default function FoolItem() {
                                     <p>грн</p>
                                 </div>
                                 <div className="block2-buttons">
-                                    <button className="button1">
+                                    <button onClick={addInCart} className="button1">
                                         <p>В корзину</p>
                                         <img src={cart1} alt="cart1" />
                                     </button>
@@ -84,7 +115,7 @@ export default function FoolItem() {
                             </div>
                         </div>
                     </div>
-                    <button className="foolitem-slide1">
+                    <button onClick={() => plusSlide(+slides)} className="foolitem-slide1">
                         <img src={strelka2} alt="strelka2" />
                     </button>
                 </div>

@@ -9,7 +9,7 @@ export const foolSlice = createSlice({
   name: 'fool',
   initialState,
   reducers: {
-    slide(state, action) {
+    setSlide(state, action) {
       state.slide = action.payload;
     },
     setFoolItem(state, action) {
@@ -18,6 +18,6 @@ export const foolSlice = createSlice({
   },
 });
 
-export const { slide, setFoolItem } = foolSlice.actions;
+export const { setSlide, setFoolItem } = foolSlice.actions;
 
 export default foolSlice.reducer;

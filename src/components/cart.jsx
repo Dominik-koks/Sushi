@@ -44,7 +44,7 @@ export default function Cart() {
                     <div className="cart-item-container">
                         {cart && cart.map((item, i) => <div key={i} className="cart-item">
                             <div className="item-container1">
-                                <img onClick={() => removeItem(item.id)} className='item-img1' src={crestick} alt="crestic" />
+                                <img onClick={() => removeItem(item)} className='item-img1' src={crestick} alt="crestic" />
                                 <img className='item-img2' src={item.imageUrl} alt="item1" />
                                 <div className="item-info">
                                     <h3>{item.name}</h3>
