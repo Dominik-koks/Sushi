@@ -17,9 +17,6 @@ export default function FoolItem() {
 
     const slides = useSelector(state => state.slide.slide)
     const items = useSelector(state => state.slide.foolItems)
-    // const menu = useSelector(state => state.sushi.menu)
-    // const [items, setItems] = useState([])
-    // const [slide, setSlide] = useState()
     const dispatch = useDispatch()
     const { id } = useParams()
     console.log(id)

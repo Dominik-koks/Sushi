@@ -49,12 +49,6 @@ export default function Header() {
                             <Link to='/we'><li>О нас</li></Link>
                             <Link to='/news'><li>Новости</li></Link>
                         </ul>
-
-
-                        {/* <Link to='/home'> <p>Главная</p></Link>
-                        <Link to='/delivery'><p>Доставка</p></Link>
-                        <Link to='/we'><p>О нас</p></Link>
-                        <p>Новости</p> */}
                     </div>
                     <div className="contacts">
                         <img src={telefon} alt="telefon" />

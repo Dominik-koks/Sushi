@@ -1,11 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-// export const fetch = (action) => {
-//   axios.get('http://localhost:3000/db.json').then(({ data }) => {
-//     setMenu(data.menu);
-//   });
-// };
-
 // export const fetchMenu = createAsyncThunk('menu/fetchMenuStatus', async () => {
 //   const { data } = await axios.get(`http://localhost:3000/db.json`);
 
