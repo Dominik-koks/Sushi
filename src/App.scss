@@ -19,7 +19,32 @@
     width: 100%;
     height: 100%;
 
+
+    .dos {
+      width: 100%px;
+      height: 496px;
   
+      .dos.container {
+        width: 1044px;
+        height: 496px;
+  
+        .dos-block {
+          width: 1044px;
+          height: 496px;
+  
+          .dos-title {
+            width: 1044px;
+            height: 80px;
+  
+            h2 {
+              color: #1D1D1F;
+              font-weight: 700;
+              font-size: 38px;
+            }
+          }
+        }
+      }
+    }
 
     .foolitem{
       width: 100%;
